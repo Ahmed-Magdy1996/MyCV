@@ -1,0 +1,511 @@
+/* START Global */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.osm-color{
+    color: #ff305b;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit !important;
+    text-decoration: none !important;
+
+}
+
+.clr{
+    clear: both;
+}
+
+.section{
+    padding: 70px 0;
+}
+
+/* End Global */
+
+.home{
+    /* background-color: blue; */
+    /* linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), */
+    background-image:  url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.layer{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+.home .home-content{
+
+    /* background-color: green; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.home .home-content p{
+    font-size: 22px;
+}
+
+
+.home .home-content p::after{
+    content: " |";
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    0%{ content: " |";}
+    3%{ content: " D|";}
+    6%{ content: " De|";}
+    9%{ content: " Des|";}
+    12%{ content: " Desi|";}
+    15%{ content: " Desig|";}
+    18%{ content: " Design|";}
+    22%{ content: " Designe|";}
+    25%{ content: " Designer|";}
+    28%{ content: " Designe|";}
+    32%{ content: " Design|";}
+    35%{ content: " Desig|";}
+    38%{ content: " Desi|";}
+    40%{ content: " Des|";}
+    43%{ content: " De|";}
+    45%{ content: " D|";}
+    48%{ content: " De|";}
+    50%{ content: " Dev|";}
+    53%{ content: " Deve|";}
+    55%{ content: " Devel|";}
+    58%{ content: " Develo|";}
+    61%{ content: " Develop|";}
+    64%{ content: " Develope|";}
+    67%{ content: " Developer|";}
+    70%{ content: " Develope|";}
+    73%{ content: " Develop|";}
+    75%{ content: " Develo|";}
+    78%{ content: " Devel|";}
+    81%{ content: " Deve|";}
+    83%{ content: " Dev|";}
+    85%{ content: " De|";}
+    88%{ content: " D|";}
+    90%{ content: " D|";}
+    
+}
+
+
+
+.home .home-content h1{
+    font-size: 70px;
+    font-weight: 70px;
+}
+
+
+.home .nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: #333;
+    padding: 20px;
+}
+
+
+.home .nav .logo{
+float: left;
+}
+
+.home .nav ul{
+    float: right;
+}
+
+.home .nav ul li{
+    float: right;
+    padding-right: 30px;
+}
+
+
+.home .nav ul li a{
+    text-transform: capitalize;
+    transition: .3s color;
+}
+
+.home .nav ul li a:hover{
+    color: #ff305b !important ;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .home .nav ul {
+        position:absolute;
+        background-color: red;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: .6s all;
+    }
+
+
+
+
+
+
+    .home .nav ul li {
+        float: none;
+        padding: 15px;
+    }
+
+
+
+.icon {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon  span
+{
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+    transition: .3s all;
+}
+
+.icon span:nth-child(1){
+    top: 0;
+}
+
+
+.icon span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.icon span:nth-child(3){
+    bottom: 0;
+}
+
+
+.icon:hover + ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon:hover span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+
+
+.icon:hover span:nth-child(2){
+    opacity: 0;
+}
+
+
+
+.icon:hover span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%)rotate(-45deg);
+}
+
+}
+/* End Home  */
+
+
+
+/* START About   */
+.about{
+
+}
+
+
+
+.about .about-img{
+    float: left;
+    width: 35%;
+}
+
+
+
+
+
+.about .about-img .brder{
+    border: 10px solid  #333;
+    border-radius: 7px;
+}
+
+
+
+.about .about-img .brder .img {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+
+
+.about .about-img .brder .img .layer {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    transition: .3s top;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-img .brder .img:hover .layer {
+    top: 0;
+}
+
+.about .about-img .brder .img .layer i {
+    font-size: 20px; 
+    color: white; 
+}
+
+
+.about .about-img .brder .img .layer i:hover {
+    background-color: #ff305b;
+
+}
+
+
+.about .about-img .brder .img .layer i{
+    padding: 10px;
+}
+/* C H A T - G P T */
+
+
+
+
+
+
+
+
+
+
+.about .about-img .brder .img img{
+    width: 100%;
+}
+
+.about .about-img .brder .img .layer {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    transition: .3s top;
+}
+
+.about .about-img .brder .img:hover .layer{
+    top: 0;
+
+}
+
+
+.about .about-content{
+    margin-left: 5%;
+    float: left;
+    width: 60%;
+}
+
+
+.about .about-content h2{
+    position: relative;
+    padding-left: 6px;
+    font-size: 34px ;
+    margin-bottom: 10px;
+}
+
+
+.about .about-content p{
+    /* letter-spacing: 1px; */
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding-bottom: 25px;
+    border-bottom: #333 dashed 2px ;
+}
+
+.about .about-content h2::before{
+content: '';
+position: absolute;
+width: 4px;
+height: 100%;
+left: 0%;
+background-color: #ff305b;
+}
+
+
+.about .about-content ul li{
+    width: 50%;
+    padding-bottom: 20px;
+    float: left;
+}
+
+.about .about-content ul li span{
+    font-weight: bolder;
+}
+
+
+
+.about .about-content button{
+    
+    background-color: #ff305b;
+    border: 2px solid #ff305b;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 3s #ec2403;
+    
+}
+
+
+
+
+.about .about-content button:hover{
+    background-color: #ec2403
+}
+
+
+@media only screen and (max-width: 992px){
+    .about .about-content , .about .about-img{
+        width: 49%;
+        margin: 0%;
+        
+    }
+
+    .about .about-img{
+        margin-right:  2%; ;
+    }
+
+    .about .about-img .brder{
+        border:none ;
+    }
+
+    .about .about-img .brder .img{
+        /* position: static;  */
+        top: 0;
+        left: 0;
+        
+    }
+
+    .about .about-img .brder .img .layer{
+
+    }
+
+}
+
+
+@media only screen and (max-width: 768px){
+    .about .about-content , .about .about-img{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+
+    .about .about-content ul li{
+        padding-bottom: 20px;
+        width: 100%;
+    }
+}
+/* End About   */
+
+
+
+
+
+
+
+/* START SERVICES */
+.services{
+    background-color: black;
+}
+
+.services h2{
+    position: relative;
+    text-align:center ;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.services h2::after , 
+.services h2::before  {
+
+}
+
+.services h2::after {
+width: 100px;
+height: 2px;
+background-color: #ff305b;
+position: absolute;
+}
+
+.services h2::before{
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END SERVICES */
